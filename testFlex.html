@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="myStyle.css">
+    <style>
+        .myButton {
+            background-color: red;
+            color: yellow;
+            margin: 1px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 5px;
+            padding: 5px;
+
+        }
+        .myButton:hover {
+            background-color: yellow;
+            color: red;
+            font-size: 20px;
+            transition: font-size 1s ease-out;
+
+        }
+        .flexContainer {
+            display: flex;
+            justify-content: space-between;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>My Menu</h1>
+     <div class="flexContainer">
+        <span class="lhMenu">Menu</span>
+        <span class="centreMenu">
+            <span class="myButton">Dogs </span>
+            <span class="myButton">Cats </span>
+            <span class="myButton">Other pets </span>
+            <span class="myButton">Get pet support</span></span>
+        <span class="rhMenu">About PetRescue Good Reads</span>
+    </div class="flexContainer">
+</body>
+</html>
