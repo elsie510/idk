@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("changeTextButton").addEventListener("click", () => {
+                document.getElementById("demo").textContent = "Hello JavaScript!";
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>WThis is a javascript test?</h2>
+
+    <p id="demo">JavaScript can change HTML content.</p>
+
+    <button id="changeTextButton" type="button">Click Me!</button>
+</body>
+</html>
