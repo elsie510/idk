@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pony kitchen</title>
+    <link rel=stylesheet href="style.css"> <!--Link css stylesheet.-->
+</head>
+<body>
+<!--Navigation bar-->
+     <header class="sticky">
+         <div class="flexContainer">
+            <h1 style="display: flex; align-items: center; margin: 0; width: max-content; position: relative; z-index: 10;">
+                <a href="index.html" style="display: block">
+                <img src="PONYKITCHEN.png" style="display: block; margin: 2px auto; width: 260px; height: auto;">
+                </a>
+            </h1>
+            <span class="myButton menu" onclick="toggleMenu()">Menu</span> <!--toggleMenu when menu is clicked-->
+            <span class="menuButton">
+                <a href="index.html" class="active">
+                    <span class="myButton">Home</span>
+                    </a>
+                <a href="menu.html">
+                    <span class="myButton">Recipes</span>
+                    </a>
+                <a href="contact.html">
+                    <span class="myButton">Contact</span>
+                    </a>
+            </span>
+        </div> 
+     </header>
+<!--Mobile navigation menu (When menu button is clicked).-->
+    <div id="mobileMenu">
+        <div class="mobileLinks">
+        <a href="index.html" class="active">     
+            <span class="myButton">Home</span>
+            </a>
+        <a href="menu.html">
+            <span class="myButton">Recipes</span>
+            </a>
+        <a href="contact.html">
+            <span class="myButton">Contact</span>
+            </a>
+        </div>
+    </div>
+
+    <section class="part1">
+        <div class="cookLikeAPony">
+            <span class="myButton1">✨ Magical Recipes from Equestria</span>
+            <h2>Cook Like <br>a Pony!🦄<br></h2>
+            <p>Discover enchanted recipes inspired by the Mane 6. From Twilight's sparkle cupcakes to Applejack's apple pie — every recipe is a new adventure in Ponyville!</p>
+            <a href="menu.html" class="myButton2">Browse Recipes →
+            </a>
+            <div class="row">
+                <div class="item">
+                    <span class="number">6</span>
+                    <span class="label">Pony characters</span>
+                </div>
+                <div class="item">
+                    <span class="number">5⭐</span>
+                    <span class="label">Star rating</span>
+                </div>
+            </div>
+        </div>
+        <div class="photo"> 
+            <img src="MYLITTLEPONY.png" class="photo1" alt="My little pony characters">
+            <img src="MYLITTLEPONY2.png" class="photo2" alt="My little pony characters">
+        </div>
+    </section>
+
+    <section class="part2">
+        <div class="magicalRecipes">
+            <div class="together">
+                <h3>Magical Recipes✨</h3> 
+                <span class="p1">Discover the most loved recipes from Ponyville's finest chefs</span>
+            </div>
+            <a href="menu.html" class="viewAll">View all →</a>
+        </div>
+        <div class="recipeSquare">
+            <!--Twilight sparkles-->
+            <div class="recipeCard">
+                <div class="recipeImage">
+                    <span class="characterTwilightSparkles">Twilight Sparkle</span>
+                    <img src="1twilightsparkle.png" alt="Twilight Sparkle's Cupcakes" class="img">
+                </div>
+                <div class="recipeInformation">
+                    <h4>Twilight Sparkle's Cupcakes</h4>
+                    <span class="p2">Magical purple-frosted cupcakes dusted with edible star glitter.</span>
+                    <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+                    <div class="recipeStats">
+                        <span class="mediumDifficulty">MEDIUM</span>
+                        <span class="time">⏱️ 45 min</span>
+                    </div>
+                    <a href="menu.html" class="recipeButton">View Recipe</a>
+                </div>
+            </div>
+            <!--Rainbow dash-->
+            <div class="recipeCard">
+                <div class="recipeImage">
+                    <span class="characterRainbowDash">Rainbow Dash</span>
+                    <img src="2rainbowdash.png" alt="Rainbow Dash Energy Bowl" class="img">
+                </div>
+                <div class="recipeInformation">
+                    <h4>Rainbow Dash's Energy Bowl</h4>
+                    <span class="p2">A vibrant rainbow smoothie bowl bursting with tropical fruits.</span>
+                    <div class="rating">⭐⭐⭐⭐⭐ 4.7</div>
+                    <div class="recipeStats">
+                        <span class="easyDifficulty">EASY</span>
+                        <span class="time">⏱️ 15 min</span>
+                    </div>
+                    <a href="recipe.html" class="recipeButton">View Recipe</a>
+                </div>
+            </div>
+            <!--Pinkie Pie-->
+            <div class="recipeCard">
+                <div class="recipeImage">
+                    <span class="characterPinkiePie">Pinkie Pie</span>
+                    <img src="3pinkiepie.png" alt="Pinkie Pie's Party Cake" class="img">
+                </div>
+                <div class="recipeInformation">
+                    <h4>Pinkie Pie's Party Cake</h4>
+                    <span class="p2">Six layers of rainbow joy — because every day with Pinkie is a party.</span>
+                    <div class="rating">⭐⭐⭐⭐⭐ 5.0</div>
+                    <div class="recipeStats">
+                        <span class="hardDifficulty">HARD</span>
+                        <span class="time">⏱️ 2 hrs</span>
+                    </div>
+                    <a href="menu.html" class="recipeButton">View Recipe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--Footer-->
+    <footer class="footer">
+        <div class="footerContainer">
+            <div class="footerLogo">
+                <span><img src="PONYKITCHEN.png" alt="Pony kitchen" style="display: block; margin: 2px auto; width: 260px; height: auto;" ></span>
+                <span class="p2">Magical recipes inspired by the Mane 6. Every meal is a little bit of Equestrian enchantment!</span>
+                <span class="p2" style="white-space: nowrap; display: block; width: max-content; margin-top: 20px;">© 2026 Pony Kitchen. All rights reserved. Friendship is Magic! ✨</span>            
+            </div>
+            <div class="footerLinks">
+                <span class="p2">Quick Links</span>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Recipes</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footerContact">
+                <span class="p2">Contact</span>
+                <span class="p2">hello@ponykitchen.com</span>
+                <span class="p2">+1 (555) PONY-123</span>
+                <span class="p2">Ponyville, Equestria</span>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script> <!--Javascript-->
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pony kitchen</title>
+    <link rel=stylesheet href="style.css"> <!--Link css stylesheet-->
+</head>
+<body>
+    <!--Navigation bar-->
+     <header class="sticky">
+         <div class="flexContainer">
+            <h1 style="display: flex; align-items: center; margin: 0; width: max-content; position: relative; z-index: 10;">
+                <a href="index.html" style="display: block">
+                <img src="PONYKITCHEN.png" style="display: block; margin: 2px auto; width: 260px; height: auto;">
+                </a>
+            </h1>
+            <span class="myButton menu" onclick="toggleMenu()">Menu</span> <!--toggleMenu when menu is clicked-->
+            <span class="menuButton">
+                <a href="index.html">
+                    <span class="myButton">Home</span>
+                    </a>
+                <a href="menu.html" class="active">
+                    <span class="myButton">Recipes</span>
+                    </a>
+                <a href="contact.html">
+                    <span class="myButton">Contact</span>
+                    </a>
+            </span>
+        </div> 
+     </header>
+<!--Mobile navigation menu (When menu button is clicked).-->
+    <div id="mobileMenu">
+        <div class="mobileLinks">
+        <a href="index.html">     
+            <span class="myButton">Home</span>
+            </a>
+        <a href="menu.html" class="active">
+            <span class="myButton">Recipes</span>
+            </a>
+        <a href="contact.html">
+            <span class="myButton">Contact</span>
+            </a>
+        </div>
+        </div>
+    
+    <section class="rainbowDashRecipePage">
+        <div class="rainbowDashContainer">
+            <a href="menu.html" class="backToAllRecipes">← Back to All Recipes</a>
+            <div class="rainbowDashh">
+                <img src="2rainbowdash.png" alt="Rainbow Dash Energy Bowl" class="rainbowDashImage">
+                <span class="inspiredByCharacterRainbowDash">Inspired by Rainbow Dash 🌈</span>
+                <h2 class="rainbowDashEnergyBowl">Rainbow Dash Energy Bowl</h2>
+            </div>
+            <div class="rainbowDashStats">
+                <div class="statsItem">
+                    <span class="statsLabel">⏱️ TOTAL TIME</span>
+                    <span class="statsNumber">15 min</span>
+                </div>
+                <div class="statsItem">
+                    <span class="statsLabel">🍽️ SERVINGS</span>
+                    <span class="statsNumber">2</span>
+                </div>
+                <div class="statsItem">
+                    <span class="statsLabel">DIFFICULTY</span>
+                    <span class="easyDifficulty">EASY</span>
+                </div>
+                <div class="statsItem">
+                    <span class="statsLabel">⭐ RATING</span>
+                    <span class="statsNumber">4.7 / 5.0</span>
+                </div>
+            </div>
+            <p class="rainbowDashQuote">"A vibrant rainbow smoothie bowl bursting with tropical fruits — fast as a sonic rainboom!"</p>
+            <div class="rainbowDashRecipe">
+                <div class="rainbowDashIngredients">
+                    <h3 class="rainbowDashIngredientsHeading">Ingredients</h3>
+                    <!--AI-2026-002 in Javascript to make ingredients clickable.-->
+                    <ul class="checkList" id="ingredientsList">
+                        <li><span class="checkCircle">1</span><span class="checkText">1 frozen banana</span></li>
+                        <li><span class="checkCircle">2</span><span class="checkText">1/2cup frozen mango chunks</span></li>
+                        <li><span class="checkCircle">3</span><span class="checkText">1/2 cup frozen strawberries</span></li>
+                        <li><span class="checkCircle">4</span><span class="checkText">1/2 cup coconut milk</span></li>
+                        <li><span class="checkCircle">5</span><span class="checkText">Fresh blueberries, kiwi, strawberries, mango for topping</span></li>
+                        <li><span class="checkCircle">6</span><span class="checkText">2 tbsp granola</span></li>
+                        <li><span class="checkCircle">7</span><span class="checkText">1 tsp chia seeds</span></li>
+                    </ul>
+                </div>
+                <div class="rainbowDashMethod">
+                    <h3 class="rainbowDashMethodHeading">Method</h3>
+                    <!--AI-2026-002 in JavaScript to make method steps clickable.-->
+                    <ul class="checkList" id="methodList">
+                        <li><span class="checkCircle">1</span><span class="checkText">Place the frozen banana, mango, strawberries and coconut milk into a blender.</span></li>
+                        <li><span class="checkCircle">2</span><span class="checkText">Blend on high until completely smooth and thick.</span></li>
+                        <li><span class="checkCircle">3</span><span class="checkText">Pour the smoothie into a wide, shallow bowl.</span></li>
+                        <li><span class="checkCircle">4</span><span class="checkText">Arrange the fruit toppings in colourful rainbow stripes across the bowl.</span></li>
+                        <li><span class="checkCircle">5</span><span class="checkText">Sprinkle with granola and chia seeds.</span></li>
+                        <li><span class="checkCircle">6</span><span class="checkText">Serve immediately for maximum rainbow freshness!</span></li>
+                    </ul>
+                    <p class="tapToMarkDone">✨ Tap a step to mark it done</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="magicalRecipes" style="margin-top: 30px;">
+            <div class="together">
+                <h3>✨ More Magical Recipes</h3>
+            </div>
+        </div>
+        <div class="recipeSquare">
+            <!--Twilight sparkles-->
+            <div class="recipeCard">
+                <div class="recipeImage">
+                    <span class="characterTwilightSparkles">Twilight Sparkle</span>
+                    <img src="1twilightsparkle.png" alt="Twilight Sparkle's Cupcakes" class="img">
+                </div>
+                <div class="recipeInformation">
+                    <h4>Twilight Sparkle's Cupcakes</h4>
+                    <span class="p2">Magical purple-frosted cupcakes dusted with edible star glitter.</span>
+                    <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+                    <div class="recipeStats">
+                        <span class="mediumDifficulty">MEDIUM</span>
+                        <span class="time">⏱️ 45 min</span>
+                    </div>
+                    <a href="menu.html" class="recipeButton">View Recipe</a>
+                </div>
+            </div>
+            <!--Pinkie Pie-->
+            <div class="recipeCard">
+                <div class="recipeImage">
+                    <span class="characterPinkiePie">Pinkie Pie</span>
+                    <img src="3pinkiepie.png" alt="Pinkie Pie's Party Cake" class="img">
+                </div>
+                <div class="recipeInformation">
+                    <h4>Pinkie Pie's Party Cake</h4>
+                    <span class="p2">Six layers of rainbow joy — because every day with Pinkie is a party.</span>
+                    <div class="rating">⭐⭐⭐⭐⭐ 5.0</div>
+                    <div class="recipeStats">
+                        <span class="hardDifficulty">HARD</span>
+                        <span class="time">⏱️ 2 hrs</span>
+                    </div>
+                    <a href="menu.html" class="recipeButton">View Recipe</a>
+                </div>
+                <!--Applejack-->
+            </div>
+            <div class="recipeCard" data-category="Desserts">
+                <div class="recipeImage">
+                    <span class="characterApplejack">Applejack</span>
+                    <img src="4applejack.png" alt="Applejack's Apple Pie" class="img">
+                </div>
+                <div class="recipeInformation">
+                    <h4>Applejack's Apple Pie</h4>
+                    <span class="p2">Honest-to-goodness classic apple pie from Sweet Apple Acres, just like Granny Smith always made it.</span>
+                    <div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
+                    <div class="recipeStats">
+                        <span class="mediumDifficulty">MEDIUM</span>
+                        <span class="time">⏱️ 1 hr 30 min</span>
+                    </div>
+                    <a href="menu.html" class="recipeButton">View Recipe</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footerContainer">
+            <div class="footerLogo">
+                <span><img src="PONYKITCHEN.png" alt="Pony kitchen" style="display: block; margin: 2px auto; width: 260px; height: auto;"></span>
+                <span class="p2">Magical recipes inspired by the Mane 6. Every meal is a little bit of Equestrian enchantment!</span>
+                <span class="p2" style="white-space: nowrap; display: block; width: max-content; margin-top: 20px;">© 2026 Pony Kitchen. All rights reserved. Friendship is Magic! ✨</span>            
+            </div>
+            <div class="footerLinks">
+                <span class="p2">Quick Links</span>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Recipes</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footerContact">
+                <span class="p2">Contact</span>
+                <span class="p2">hello@ponykitchen.com</span>
+                <span class="p2">+1 (555) PONY-123</span>
+                <span class="p2">Ponyville, Equestria</span>
+            </div>
+        </div>
+    </footer> 
+    <script src="script.js"></script> <!--Javascript-->
+</body>
+</html>
+

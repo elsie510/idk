@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pony kitchen</title>
+    <link rel="stylesheet" href="style.css"> <!--Link css stylesheet-->
+</head>
+<body>
+<!--Navigation bar-->
+     <header class="sticky">
+         <div class="flexContainer">
+            <h1 style="display: flex; align-items: center; margin: 0; width: max-content; position: relative; z-index: 10;">
+                <a href="index.html" style="display: block">
+                <img src="PONYKITCHEN.png" style="display: block; margin: 2px auto; width: 260px; height: auto;">
+                </a>
+            </h1>
+            <span class="myButton menu" onclick="toggleMenu()">Menu</span> <!--toggleMenu when menu is clicked-->
+            <span class="menuButton">
+                <a href="index.html">
+                    <span class="myButton">Home</span>
+                    </a>
+                <a href="menu.html">
+                    <span class="myButton">Recipes</span>
+                    </a>
+                <a href="contact.html" class="active">
+                    <span class="myButton">Contact</span>
+                    </a>
+            </span>
+        </div> 
+     </header>
+<!--Mobile navigation menu (When menu button is clicked).-->
+    <div id="mobileMenu">
+        <div class="mobileLinks">
+        <a href="index.html">     
+            <span class="myButton">Home</span>
+            </a>
+        <a href="menu.html">
+            <span class="myButton">Recipes</span>
+            </a>
+        <a href="contact.html"  class="active">
+            <span class="myButton">Contact</span>
+            </a>
+        </div>
+        </div>
+
+    <section class="contactPage">
+        <div class="contactHeading">
+            <span class="recipeAllRecipes">Get in Touch ✨</span>
+            <p class="p1">Have a recipe suggestion, a question, or just want to say hello? We'd love to hear from you!</p>
+        </div>
+        <div class="contactMessage"> 
+            <div class="messageBox">
+                <h3 class="messageSendUsAMessage">Send Us a Message</h3>
+                <form>
+                    <!--Example text before you type.-->
+                    <label class="messageLabel">Your Name</label>
+                    <input type="text" placeholder="Twilight Sparkle">
+
+                    <label class="messageLabel">Email Address</label>
+                    <input type="email" placeholder="twilight@cantelot.edu">
+
+                    <label class="messageLabel">Subject</label>
+                    <input type="text" placeholder="Recipe suggestion...">
+
+                    <label class="messageLabel">Message</label>
+                    <textarea placeholder="Tell us what's on your mind..."></textarea>
+
+                    <button type="submit" class="messageSendMessageButton">Send Message ✨</button>
+                </form>
+            </div>
+            <div class="contactInformation">
+                <div class="contactBox">
+                    <div class="contactEmoji">💌</div>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p class="p2">hello@ponykitchen.com</p>
+                        <span>We respond within 24 hours!</span>
+                    </div>
+                </div>
+                <div class="contactBox">
+                    <div class="contactEmoji">☎️</div>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p class="p2">+1 (555) PONY-123</p>
+                        <span>Mon - Fri, 9am - 5pm EST</span>
+                    </div>
+                </div>
+                <div class="contactBox">
+                    <div class="contactEmoji">📍</div>
+                    <div>
+                        <h4>Visit Us</h4>
+                        <p class="p2">123 Friendship Lane</p>
+                        <span>Ponyville, Equestria 12345</span>
+                    </div>
+                </div>
+                <div class="contactFollowTheHerd">
+                    <h4>Follow the Herd 🌈</h4>
+                    <div class="socialButton">
+                        <span class="instagramLogo"><img src="instagram.png" alt="Instagram"></span>
+                        <span class="tiktokLogo"><img src="tiktok.png" alt="Tiktok"></span>
+                        <span><img src="youtube.png" alt="Youtube"></span>
+                        <span class="pinterestLogo"><img src="pinterest.png" alt="Pinterest"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!--Footer-->
+    <footer class="footer">
+        <div class="footerContainer">
+            <div class="footerLogo">
+                <span><img src="PONYKITCHEN.png" alt="Pony kitchen" style="display: block; margin: 2px auto; width: 260px; height: auto;"></span>
+                <span class="p2">Magical recipes inspired by the Mane 6. Every meal is a little bit of Equestrian enchantment!</span>
+                <span class="p2" style="white-space: nowrap; display: block; width: max-content; margin-top: 20px;">© 2026 Pony Kitchen. All rights reserved. Friendship is Magic! ✨</span>            
+            </div>
+            <div class="footerLinks">
+                <span class="p2">Quick Links</span>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Recipes</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footerContact">
+                <span class="p2">Contact</span>
+                <span class="p2">hello@ponykitchen.com</span>
+                <span class="p2">+1 (555) PONY-123</span>
+                <span class="p2">Ponyville, Equestria</span>
+            </div>
+        </div>
+    </footer> 
+    <script src="script.js"></script> <!--Javascript-->
+</body>
+</html>

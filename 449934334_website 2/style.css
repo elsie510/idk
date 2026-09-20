@@ -1,0 +1,967 @@
+/*padding: Top, right, bottom, left
+display:block; for starting on a new line, and normal widths and heights.
+in-line; for being next to other elements, and normal widths and heights.
+*/
+
+html {
+    overflow-y: scroll; /* Makes the scrollbar space stay consistent when navigating*/
+}
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5ff;
+}
+p{
+    color: #9a6cb9;
+    margin: 20px;
+    line-height: 30px;
+    font-size: 21px;
+}
+.p1 {
+    color: #9a6cb9;
+    margin: 0;
+    font-size: 18px;
+    display: block;
+}
+h1{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+h2{
+    color:#a856f7;
+    margin: 20px;
+    font-size: 80px;
+}
+.row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px;
+    gap: 40px;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+.number {
+    color:#2d0a4e;
+    font-size: 38px;
+    margin: 0;
+    line-height: 1;
+    font-weight: bolder;
+}
+.label{
+    color:#9a6cb9;
+    font-size: 18px;
+}
+.myButton {
+    background-color: #fff5ff;
+    color: #2d0a4e;
+    font-size: 16px;
+    margin: 2px;
+    border-radius: 100px;
+    padding: 10px;
+    cursor: pointer;
+    display: inline-block; 
+    box-sizing: border-box; 
+/*box-sizing:border-box; makes padding count as inside the width instead of adding to it outside*/
+}
+.myButton1 {
+    background-color: #ffffff;
+    color: #a856f7;
+    border-color: #a856f7;
+    border-width: 2px;
+    border-style: solid;
+    margin: 20px;
+    border-radius: 100px;
+    padding: 7px;
+    display: inline-block;
+    width: max-content;
+    font-size: 18px;
+}
+.myButton2 {
+    background-color: #a856f7;
+    color: white;
+    margin: 20px;
+    border-radius: 15px;
+    padding: 15px;
+    cursor: pointer;
+    display: inline-block; 
+    box-sizing: border-box;
+    text-decoration: none;
+    width: max-content; /*100%*/
+    font-size: 25px;
+}
+.myButton:hover {
+    background-color:#f5e9fc;
+    color: #000;
+}
+.myButton:active {
+    background-color: #a856f7;
+    color: white;
+
+}
+.active .myButton {
+    background-color: #a856f7;
+    color: white;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #fff5ff;
+    z-index: 9999; /*higher numbers sit in front of lower numbers */
+}
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 10px;
+    height: 70px;
+    position: sticky; /* Keeps navigation bar stick at the top while scrolling*/
+    top: 0;
+    background-color: #fff5ff;
+    width: 100%;
+    max-width: 1070px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.menuButton a{
+    text-decoration: none;
+}
+.menuButton {
+    display: flex;
+    align-items: center; 
+}
+.menu {
+    display: none;
+}
+#mobileMenu {
+    display: none;
+    background-color: #fff5ff;
+    padding: 10px;
+}
+.mobileLinks .myButton{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+.mobileLinks a{
+    text-decoration: none;
+}
+@media (max-width: 950px) { /*Nagivation bar collapses into menu button.*/
+    .menuButton {
+        display: none;
+    }
+    .menu {
+        display: inline;
+    }
+}
+.cookLikeAPony{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    /*More responsive instead of width:600px;, and prevents horizontal scrolling on smaller screens.*/
+}
+.part1{
+    height: 93vh;
+    background-image:linear-gradient(-45deg,#fff7ed,#f3e9ff); /*Gradient background.*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.photo {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+    max-height: 90vh;
+    gap: 12px;
+}
+.photo1 {
+    width: 100%;
+    aspect-ratio: 1/1; /*Square*/
+    object-fit: cover; /*Fills without strethcing or distorting the image.*/
+    border-radius: 12px;
+    flex-shrink: 0; /*Stops photo from shrinking.*/
+}
+.photo2 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    flex: 1; /*Stretches.*/
+}
+@media(max-width:950px) { /*Images disappear on screen smaller than 950px.*/
+    .photo {
+        display: none;
+    }
+}
+.part2 {
+    height: 100%;
+    background-color: #fef5ff;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 60px 0;
+}
+h3 {
+    font-size: 28px;
+    color: #2d0a4e;
+    margin: 60px 0 0 0;
+}
+.magicalRecipes {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.together {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+}
+.viewAll {
+    color: #9a6cb9;
+    margin: 0;
+    text-decoration: none;
+    font-size: 18px;
+}
+.viewAll:hover{
+    text-decoration: underline;
+}
+/* Menu css */
+.recipeCollection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 100%;
+    max-width: 1040px;
+    margin: 30px auto 0 auto;
+    box-sizing: border-box;
+    height: auto;
+}
+.recipeSquare {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    max-width: 1060px;
+    margin: 50px auto 30px auto;
+    padding: 0 20px;
+    box-sizing:border-box;
+}
+.recipeCard {
+    display: flex;
+    flex-direction: column;
+    width: 326px;
+    height: 415px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.recipeImage {
+    position: relative; /*Image stays inside the card.*/
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.characterTwilightSparkles {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background-color: #a856f7;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 100px;
+}
+.characterRainbowDash {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background-color: #3ea6de;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 100px;
+}
+.characterPinkiePie {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background-color: #F278A6;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 100px;
+}
+.characterApplejack {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background-color: #F5A623;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 100px;
+}
+.characterRarity {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background-color: #594773;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 100px;
+}
+.characterFluttershy {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background-color: #F5D96B;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 100px;
+}
+.recipeInformation {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 20px;
+    height: 50%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+.recipeInformation h4 { /*Extra css to h4 recipe.*/
+    color: #2d0a4e;
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0;
+}
+.p2 {
+    color: #a856f7;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+}
+.rating {
+    color: #fdc800;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+.recipeStats {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;   
+}
+.easyDifficulty {
+    color: #33B266;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #33B266;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+.mediumDifficulty {
+    color: #a856f7;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #a856f7;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+.hardDifficulty {
+    color: #F278A6;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #F278A6;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+.time {
+    color: #2d0a4e;
+    font-size: 14px;
+}
+.recipeButton {
+    display: block;
+    width: 100%;
+    background-color:#a856f7;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    padding: 11px 0;
+    border-radius: 12px;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: pointer; /*Changes to hand icon to show that it is clickable.*/
+    border: none;
+}
+.recipePage {
+    background-color: #fef5ff;
+    width: 100%;
+    min-height: 93vh;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.recipeMagicalRecipes {
+    height: 200px;
+    background-image: linear-gradient(-45deg, #fbe7f3, #f3e9ff); /*Gradient.*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.recipeAllRecipes {
+    color: #2d0a4e;
+    font-weight: bolder;
+    font-size: 50px;
+}
+.recipeControls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.recipeSearchBar {
+    color: #a856f7;
+    height: 42px;
+    flex: 1;
+    border-color: #a856f7;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 100px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.recipeSearchBar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 8px;
+    font-size: 14px;
+    color: #2d0a4e;
+    background-color: #ffffff;
+}
+.recipeSearchBar input::placeholder {
+    color: #a856f7;
+}
+.recipeCategoryButtons {
+    display: flex;
+    gap: 8px;
+}
+.recipeCategory {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #a856f7;
+    background-color: #ffffff;
+    color: #2d0a4e;
+    border-radius: 100px;
+    padding: 10px 17px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+}
+.recipeCategory.active {
+    background-color: #a856f7;
+    color: #ffffff;
+    border-color: #a856f7;
+}
+.recipeCount {
+    color: #a856f7;
+    font-size: 14px;
+    width: 100%;
+    max-width: 1060px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+/*Footer css*/
+.footer {
+    height: 100%;
+    background-color: #F3E9FF;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    padding: 30px 0;
+}
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.footerLogo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+}
+.footerLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footerLinks a {
+    color: #a856f7;
+    text-decoration: none;
+    font-size: 14px;
+}
+.footerLinks a:hover {
+    color: #9a6cb9;
+    text-decoration: none;
+    font-size: 14px;
+}
+.footerContact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: left;
+}
+/*Contact page*/
+.contactPage {
+    background-color: #fef5ff;
+    width: 100%;
+    min-height: auto;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+.contactHeading {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(45deg, #f3e9ff, #fbe7f3); /*Gradient*/
+    height: 200px;
+}
+.contactMessage {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 100%;
+    max-width: 1060px;
+    margin: 30px auto 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+.messageBox {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 24px;
+    padding: 24px;
+}
+.messageSendUsAMessage {
+    color: #2d0a4e;
+    font-size: 20px;
+    margin: 0 0 12px 0;
+}
+form {
+    display: block;
+    width: 100%;
+}
+.messageLabel {
+    display: block;
+    color: #2d0a4e;
+    font-size: 14px;
+    margin: 7px 0 4px 0;
+}
+.messageBox input {
+    width: 100%;
+    height: 32px;
+    background-color: #f3e9ff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d9c5e8;
+    border-radius: 7px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: none;
+}
+.messageBox input:focus{ /*Highlights and changes color when clicked for typing.*/
+    border-color: #a856f7;
+}
+.messageBox textarea {
+    width: 100%;
+    height: 72px;
+    background-color: #f3e9ff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d9c5e8;
+    border-radius: 7px;
+    padding: 9px 10px;
+    box-sizing: border-box;
+    resize: none; /*Removes the draggable corner on the bottom right to keep the format.*/
+    font-size: 14px;
+    outline: none; /*Removes the default dark blue outline when clicked.*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+.messageBox textarea:focus {
+    border-color: #a856f7;
+}
+.messageSendMessageButton {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background-color: #a856f7;
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 22px;
+    cursor: pointer;
+    display: block;
+    padding: 11px 0;
+}
+.messageSendMessageButton:hover {
+    background-color: #8e3bd6;
+}
+.contactInformation {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+.contactBox {
+    background-color: #ffffff;
+    border-radius: 12px;
+    min-height: 70px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-sizing: border-box;
+}
+.contactEmoji {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ead7f4;
+    color: #a856f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 13px;
+}
+.contactBox h4 {
+    color: #a856f7;
+    font-size: 14px;
+    margin: 0 0 6px 0;
+}
+.contactBox p2 {
+    color: #a856f7;
+    font-size: 14px;
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+}
+.contactBox span {
+    color: #2d0a4e;
+    font-size: 12px;
+}
+.contactFollowTheHerd {
+    margin-top: 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d9c5e8;
+    border-radius: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.contactFollowTheHerd h4 {
+    color: #2d0a4e;
+    font-size: 14px;
+    margin: 12px 0 7px 0;
+}
+.socialButton {
+    display: flex;
+    gap: 9px;
+}
+.socialButton span {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.socialButton span img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.socialButton .instagramLogo img {
+    width: 80%;
+    height: 80%;
+}
+.socialButton .tiktokLogo img {
+    width: 125%;
+    height: 125%;
+}
+.socialButton .pinterestLogo img {
+    width: 125%;
+    height: 125%;
+}
+@media (max-width: 950px) { /*Column layout with width: 100%;.*/
+    .contactMessage {
+        flex-direction: column;
+    }
+    .messageBox {
+        width: 100%;
+    }
+    .contactInformation {
+        width: 100%;
+    }
+}
+/*Rainbow Dash recipe page css*/
+.rainbowDashRecipePage {
+    background-color: #fef5ff;
+    width: 100%;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.rainbowDashContainer {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 30px 20px 0 20px;
+    box-sizing: border-box;
+}
+.backToAllRecipes {
+    color: #9a6cb9;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.backToAllRecipes:hover {
+    text-decoration: underline;
+}
+.rainbowDashh {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+.rainbowDashImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.inspiredByCharacterRainbowDash {
+    position: absolute;
+    top: 20px; /*To help with overlapping with smaller screens, more responsive.*/
+    left: 20px;
+    background-color: #3ea6de;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 100px;
+}
+.rainbowDashEnergyBowl {
+    color: #fff5ff;
+    font-size:50px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+}
+.rainbowDashStats {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #a856f7;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 495px;
+}
+.statsItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.statsLabel {
+    color: #9a6cb9;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.statsNumber {
+    color: #2d0a4e;
+    font-size: 18px;
+    font-weight: bold;
+}
+.rainbowDashQuote {
+    color: #a856f7;
+    font-style: italic;
+    font-size: 18px;
+    background-color: #F3E9FF;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 0 0 30px 0;
+}
+.rainbowDashRecipe {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.rainbowDashIngredients {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-sizing: border-box;
+    flex: 1;
+    min-width: 300px;
+}
+.rainbowDashMethod {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-sizing: border-box;
+    flex: 1;
+    min-width: 300px;
+}
+.rainbowDashIngredientsHeading {
+    color: #2d0a4e;
+    font-size: 22px;
+    margin: 0 0 16px 0;
+}
+.rainbowDashMethodHeading {
+    color: #2d0a4e;
+    font-size: 22px;
+    margin: 0 0 16px 0;
+}
+.checkList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.checkList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #f3e9ff;
+}
+.checkCircle {
+    flex-shrink: 0; /*Stop flexbox from distorting the circle.*/
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #a856f7;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checkText {
+    color: #2d0a4e;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.checkList li.checked {
+    opacity: 0.45;
+}
+.checkList li.checked .checkCircle {
+    background-color: #33B266;
+}
+.checkList li.checked .checkText {
+    text-decoration: line-through;
+}
+.tapToMarkDone {
+    color: #a856f7;
+    font-size: 14px;
+    margin: 16px 0 0 0;
+    text-align: center;
+}
+@media (max-width: 950px) {
+    .rainbowDashRecipe {
+        flex-direction: column;
+    }
+    .rainbowDashh {
+        height: 220px;
+    }
+}
