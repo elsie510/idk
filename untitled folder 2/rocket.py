@@ -1,4 +1,3 @@
-print('Written by Elsie He')
 import time
 print(10)
 time.sleep(1)
